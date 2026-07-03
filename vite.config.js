@@ -46,7 +46,7 @@ function kelvoRoutes() {
         }
 
         // Unknown route → 404 page
-        const file = path.join(root, "404.html");
+        const file = path.join(root, "public", "404.html");
         if (fs.existsSync(file)) {
           res.statusCode = 404;
           res.setHeader("Content-Type", "text/html; charset=utf-8");
