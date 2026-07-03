@@ -93,12 +93,16 @@
      The list is duplicated once for a seamless loop.
      -------------------------------------------------------- */
   const LOGOS = [
-    { src: "assets/logos/northpeak.svg", alt: "Northpeak" },
-    { src: "assets/logos/lumina.svg", alt: "Lumina" },
-    { src: "assets/logos/vertex.svg", alt: "Vertex" },
-    { src: "assets/logos/halcyon.svg", alt: "Halcyon" },
-    { src: "assets/logos/meridian.svg", alt: "Meridian" },
-    { src: "assets/logos/cobalt.svg", alt: "Cobalt" },
+    { src: "assets/logos/callvera.png", alt: "Callvera" },
+    { src: "assets/logos/affinitysalestraining.png", alt: "Affinity Sales Training" },
+    { src: "assets/logos/elavo partners.png", alt: "Elavo Partners" },
+    { src: "assets/logos/pipelinegenerator.png", alt: "PipelineGenerator" },
+    { src: "assets/logos/inlead logo.png", alt: "Inlead" },
+    { src: "assets/logos/endors.png", alt: "Endors" },
+    { src: "assets/logos/pg-icon.png", alt: "PipelineGenerator" },
+    { src: "assets/logos/easybuttonrealestate.png", alt: "Easy Button Real Estate" },
+    { src: "assets/logos/df consulting.png", alt: "DF Consulting" },
+    { src: "assets/logos/itspaydai.png", alt: "ItsPaydai" },
   ];
 
   const track = document.getElementById("tickerTrack");

@@ -266,13 +266,14 @@ section { scroll-margin-top: 72px; }
   mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
 }
 .ticker__track {
-  display: flex; align-items: center; gap: 64px;
+  display: flex; align-items: center;
   width: max-content;
   animation: tickerScroll 32s linear infinite;
 }
 .ticker__track:hover { animation-play-state: paused; }
 .ticker__logo {
   height: 36px; width: auto;
+  margin-right: 64px;
   filter: grayscale(1) opacity(0.6);
   transition: filter 0.3s var(--ease);
 }
@@ -280,6 +281,7 @@ section { scroll-margin-top: 72px; }
 .ticker__name {
   font-size: 26px; font-weight: 700; letter-spacing: -0.02em;
   color: var(--ink-2); white-space: nowrap;
+  margin-right: 64px;
 }
 @keyframes tickerScroll {
   to { transform: translateX(-50%); }
@@ -724,9 +726,25 @@ section { scroll-margin-top: 72px; }
 
   .form__row { grid-template-columns: 1fr; gap: 28px; }
   .principle { grid-template-columns: 1fr; gap: 12px; }
-  .trust__row { grid-template-columns: 1fr; }
-  .trust__cell--good { border-right: 0; border-bottom: 1px solid var(--hair-soft); }
-  .trust__row--head .trust__cell--good { border-bottom: 1px solid var(--hair); }
+  /* Trust table → stacked, self-labeling comparison cards */
+  .trust__table { border: 0; background: transparent; }
+  .trust__row {
+    grid-template-columns: 1fr;
+    border: 1px solid var(--hair-soft);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+  .trust__row:last-child { margin-bottom: 0; }
+  .trust__row + .trust__row { border-top: 0; }
+  .trust__row--head { display: none; }
+  .trust__cell { padding: 14px 18px; font-size: 15.5px; line-height: 1.45; }
+  .trust__cell--good {
+    border-right: 0;
+    border-bottom: 1px solid var(--hair-soft);
+  }
+  .trust__cell--good::before { content: "✓ Good"; margin-right: 10px; }
+  .trust__cell--weak::before { content: "— Weak"; margin-right: 10px; }
 }
 
 @media (max-width: 480px) {
