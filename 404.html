@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Kelvo — Page not found</title>
+
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/styles.css" />
+  <style>
+    /* page-specific layout */
+    .notfound {
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+      background: linear-gradient(180deg, var(--bg-soft) 0%, var(--bg) 100%);
+    }
+    .notfound__logo {
+      font-family: var(--font-logo);
+      font-size: clamp(56px, 11vw, 120px);
+      color: var(--ink);
+      line-height: 1;
+      letter-spacing: -0.01em;
+      margin-bottom: 40px;
+    }
+    .notfound__code {
+      font-size: clamp(120px, 22vw, 240px);
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      line-height: 1;
+      color: var(--ink);
+      opacity: 0.92;
+    }
+    .notfound__title {
+      margin-top: 24px;
+      font-size: clamp(24px, 3.5vw, 34px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    .notfound__sub {
+      margin-top: 16px;
+      max-width: 460px;
+      font-size: 18px;
+      line-height: 1.5;
+      color: var(--muted);
+    }
+    .notfound__actions {
+      margin-top: 36px;
+      display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
+    }
+
+    /* home-link nav, lightweight */
+    .nf-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(6,64,43,0.82);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+    .nf-nav__inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 14px var(--gutter);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nf-nav__logo {
+      font-family: var(--font-logo);
+      font-size: 28px; color: #ffffff; line-height: 1;
+    }
+    .nf-nav__cta {
+      font-size: 14px; font-weight: 600;
+      padding: 9px 18px; border-radius: 980px;
+      background: #ffffff; color: var(--accent);
+      transition: transform 0.2s var(--ease), background 0.2s var(--ease);
+    }
+    .nf-nav__cta:hover { background: #f0f4f1; transform: translateY(-1px); }
+  </style>
+</head>
+<body>
+
+  <header class="nf-nav">
+    <div class="nf-nav__inner">
+      <a href="/" class="nf-nav__logo" aria-label="Kelvo — home">kelvo</a>
+      <a href="/#inquire" class="nf-nav__cta">Inquire</a>
+    </div>
+  </header>
+
+  <main class="notfound">
+    <div class="notfound__logo">kelvo</div>
+    <div class="notfound__code">404</div>
+    <h1 class="notfound__title">This page took a wrong turn.</h1>
+    <p class="notfound__sub">The page you're looking for doesn't exist — or it's been moved. Let's get you back to something worth looking at.</p>
+    <div class="notfound__actions">
+      <a href="/" class="btn btn--primary">Back to home</a>
+      <a href="/#work" class="btn btn--ghost">See our work</a>
+    </div>
+  </main>
+
+</body>
+</html>

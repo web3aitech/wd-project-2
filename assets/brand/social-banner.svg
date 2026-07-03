@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Kelvo — Building the storefront of the world's best businesses">
+  <rect width="1200" height="630" fill="#06402B"/>
+
+  <!-- wordmark -->
+  <text x="84" y="300" font-family="'Racing Sans One', sans-serif" font-size="130" fill="#ffffff" letter-spacing="-2">kelvo</text>
+
+  <!-- tagline -->
+  <text x="88" y="372" font-family="'Satoshi', -apple-system, sans-serif" font-size="34" font-weight="500" fill="rgba(255,255,255,0.72)">
+    Building the storefront of the world's best businesses.
+  </text>
+
+  <!-- accent line -->
+  <rect x="88" y="410" width="120" height="3" fill="#ffffff" opacity="0.5"/>
+</svg>
