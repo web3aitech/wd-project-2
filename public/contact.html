@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get in touch with Kelvo. Tell us about your business and what you want to improve — we'll review it and come back with the best next step." />
+  <title>Kelvo — Contact</title>
+
+  <!-- Fonts: Satoshi (body) via Fontshare; Racing Sans One (logo) self-hosted & preloaded -->
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet" />
+  <link rel="preload" href="/assets/fonts/RacingSansOne.woff2" as="font" type="font/woff2" crossorigin />
+
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" type="image/png" href="/assets/brand/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/brand/favicon.png" />
+
+  <style>
+    .contact-hero {
+      background: var(--accent);
+      padding: 132px var(--gutter) 24px;
+      text-align: left;
+    }
+    .contact-hero__inner { max-width: var(--maxw); margin: 0 auto; }
+    .contact-hero .eyebrow { color: rgba(255,255,255,0.6); margin-bottom: 16px; }
+    .contact-hero .section-title { color: #ffffff; }
+    .contact-hero .section-lede { color: rgba(255,255,255,0.75); max-width: 560px; }
+    .contact-hero .section-head { text-align: left; padding: 0; }
+
+    .contact-form {
+      background: var(--accent);
+      padding: 32px var(--gutter) 120px;
+    }
+    .contact-form__inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .contact-form__intro h2 {
+      font-size: clamp(20px, 2.2vw, 24px);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+    .contact-form__intro p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 18px;
+    }
+    .contact-form__intro ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+    .contact-form__intro li {
+      font-size: 15px;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.82);
+      padding-left: 26px;
+      position: relative;
+    }
+    .contact-form__intro li::before {
+      content: "✓";
+      position: absolute;
+      left: 0; top: 0;
+      color: #ffffff;
+      font-weight: 700;
+    }
+    .contact-form__formwrap {
+      background: #ffffff;
+      border-radius: var(--radius);
+      padding: 36px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+
+    @media (max-width: 880px) {
+      .contact-form__inner { grid-template-columns: 1fr; gap: 40px; }
+      .contact-form__formwrap { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ───────────────────────── NAV ───────────────────────── -->
+  <header class="nav is-scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="Kelvo — home">kelvo</a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="/#manifesto" class="nav__link">Our Manifesto</a>
+        <a href="/#work" class="nav__link">Our Work</a>
+        <a href="/contact" class="nav__link">Contact</a>
+        <a href="#form" class="nav__cta">Start a project</a>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ───────────────────────── HERO ───────────────────────── -->
+    <section class="contact-hero">
+      <div class="contact-hero__inner">
+        <div class="section-head">
+          <span class="eyebrow">Contact</span>
+          <h1 class="section-title">Tell us about your project.</h1>
+          <p class="section-lede">Whether you're launching something new or refining what you already have, we'd love to hear about it. Share a few details below and we'll come back with the best next step.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── FORM ───────────────────────── -->
+    <section class="contact-form" id="form">
+      <div class="contact-form__inner">
+        <div class="contact-form__intro">
+          <h2>What to expect</h2>
+          <p>Every project starts with a conversation. Once you send the form, here's how it goes:</p>
+          <ul>
+            <li>We review your business, your current site, and your goals.</li>
+            <li>We reply with the best next step — usually within a day or two.</li>
+            <li>We take one project at a time, so you get our undivided attention.</li>
+            <li>Average launch in 14 days, with revisions included in scope.</li>
+          </ul>
+        </div>
+
+        <div class="contact-form__formwrap">
+          <form class="form" id="inquireForm" novalidate>
+            <div class="form__row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@company.com" required />
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="company">Company name</label>
+                <input type="text" id="company" name="company" placeholder="Your company" />
+              </div>
+              <div class="field">
+                <label for="industry">Industry</label>
+                <input type="text" id="industry" name="industry" placeholder="e.g. SaaS, Logistics, Finance" />
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="field__label-row">
+                <label for="website">Current website</label>
+                <label class="toggle">
+                  <input type="checkbox" id="noSite" name="noWebsite" />
+                  <span class="toggle__track"><span class="toggle__thumb"></span></span>
+                  <span class="toggle__text">We don't have a website</span>
+                </label>
+              </div>
+              <input type="url" id="website" name="website" placeholder="https://your-current-site.com" />
+            </div>
+
+            <div class="field field--select">
+              <label for="lookingFor">What are you looking for?</label>
+              <div class="select">
+                <select id="lookingFor" name="lookingFor" data-reveal-other="otherLooking">
+                  <option value="" disabled selected>Select one…</option>
+                  <option value="New website">New website</option>
+                  <option value="Website redesign">Website redesign</option>
+                  <option value="Landing page">Landing page</option>
+                  <option value="SEO/structure improvement">SEO / structure improvement</option>
+                  <option value="Other">Other</option>
+                </select>
+                <svg class="select__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <input type="text" class="field__other" id="otherLooking" name="lookingForOther" placeholder="Please specify" hidden />
+            </div>
+
+            <div class="field field--select">
+              <label for="goal">What is the main goal?</label>
+              <div class="select">
+                <select id="goal" name="goal" data-reveal-other="otherGoal">
+                  <option value="" disabled selected>Select one…</option>
+                  <option value="Look more professional">Look more professional</option>
+                  <option value="Get more leads">Get more leads</option>
+                  <option value="Improve SEO">Improve SEO</option>
+                  <option value="Make the site clearer">Make the site clearer</option>
+                  <option value="Launch a new business">Launch a new business</option>
+                  <option value="Other">Other</option>
+                </select>
+                <svg class="select__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <input type="text" class="field__other" id="otherGoal" name="goalOther" placeholder="Please specify" hidden />
+            </div>
+
+            <div class="field field--select">
+              <label for="budget">Budget range</label>
+              <div class="select">
+                <select id="budget" name="budget">
+                  <option value="" disabled selected>Select one…</option>
+                  <option value="Under $2,500">Under $2,500</option>
+                  <option value="$2,500–$5,000">$2,500–$5,000</option>
+                  <option value="$5,000–$10,000">$5,000–$10,000</option>
+                  <option value="$10,000+">$10,000+</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+                <svg class="select__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+
+            <div class="field field--select">
+              <label for="timeline">Ideal timeline</label>
+              <div class="select">
+                <select id="timeline" name="timeline">
+                  <option value="" disabled selected>Select one…</option>
+                  <option value="ASAP">As soon as possible</option>
+                  <option value="2–4 weeks">2–4 weeks</option>
+                  <option value="1–2 months">1–2 months</option>
+                  <option value="Flexible">Flexible</option>
+                </select>
+                <svg class="select__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="details">Tell us about the project</label>
+              <textarea id="details" name="details" rows="5" placeholder="Anything you'd like us to know: what you sell, who you sell to, what's not working today…"></textarea>
+            </div>
+
+            <div class="form__footer">
+              <button type="submit" class="btn btn--primary btn--block" id="submitBtn">Send inquiry</button>
+              <p class="form__note" id="formNote" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+
+          <!-- Confirmation state -->
+          <div class="confirmation" id="confirmation" hidden>
+            <div class="confirmation__mark">
+              <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" fill="none" /><path fill="none" d="M14 27l8 8 16-18" /></svg>
+            </div>
+            <h3>Thank you for your interest in working with Kelvo.</h3>
+            <p>We've received your details and will be in touch with the best next step shortly.</p>
+            <button type="button" class="btn btn--ghost" id="resetForm">Send another</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ───────────────────────── FOOTER ───────────────────────── -->
+  <footer class="footer">
+    <div class="footer__logo">kelvo</div>
+    <p class="footer__note">Building the storefront of the world's best businesses.</p>
+
+    <div class="footer__bar">
+      <div class="footer__contact" aria-label="Contact details">
+        <p class="footer__contact-line">[address]</p>
+        <p class="footer__contact-line"><a href="mailto:">[business email]</a></p>
+        <p class="footer__contact-line"><a href="tel:">[phone number]</a></p>
+      </div>
+      <nav class="footer__legal" aria-label="Legal">
+        <a href="/contact">Contact</a>
+        <a href="/terms">Terms</a>
+        <a href="/privacy">Privacy</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    /* Mobile nav toggle (self-contained; main.js is not loaded on this page) */
+    (function () {
+      var toggle = document.getElementById("navToggle");
+      var links = document.querySelector(".nav__links");
+      if (toggle && links) {
+        toggle.addEventListener("click", function () {
+          var open = links.classList.toggle("is-open");
+          toggle.classList.toggle("is-open", open);
+          toggle.setAttribute("aria-expanded", String(open));
+        });
+        links.querySelectorAll("a").forEach(function (a) {
+          a.addEventListener("click", function () {
+            links.classList.remove("is-open");
+            toggle.classList.remove("is-open");
+            toggle.setAttribute("aria-expanded", "false");
+          });
+        });
+      }
+    })();
+  </script>
+
+  <script>
+    /* Form handling — mirrors main.js (no main.js on this page) */
+    (function () {
+      "use strict";
+      var WEBHOOK = "https://hook.eu2.make.com/5ekq5f5jfvx41e30d3y6famhmcqhxv9q";
+      var form = document.getElementById("inquireForm");
+      if (!form) return;
+
+      var noSite = document.getElementById("noSite");
+      var website = document.getElementById("website");
+
+      if (noSite && website) {
+        var sync = function () {
+          var off = noSite.checked;
+          website.disabled = off;
+          if (off) {
+            website.dataset.prev = website.value;
+            website.value = "";
+          } else if (website.dataset.prev != null) {
+            website.value = website.dataset.prev;
+          }
+        };
+        noSite.addEventListener("change", sync);
+        sync();
+      }
+
+      var getSelect = function (name) {
+        var el = form.querySelector('select[name="' + name + '"]');
+        return el ? el.value.trim() : "";
+      };
+
+      form.querySelectorAll("select[data-reveal-other]").forEach(function (sel) {
+        var target = form.querySelector("#" + sel.dataset.revealOther);
+        if (!target) return;
+        var syncOther = function () {
+          var isOther = sel.value === "Other";
+          target.hidden = !isOther;
+          if (!isOther) target.value = "";
+        };
+        sel.addEventListener("change", syncOther);
+        syncOther();
+      });
+
+      var withOther = function (value, otherId) {
+        if (value !== "Other") return value;
+        var spec = (form.querySelector("#" + otherId) ? form.querySelector("#" + otherId).value : "").trim();
+        return spec ? "Other — " + spec : "Other";
+      };
+
+      form.addEventListener("submit", async function (ev) {
+        ev.preventDefault();
+        var note = document.getElementById("formNote");
+        var btn = document.getElementById("submitBtn");
+        note.className = "form__note";
+        note.textContent = "";
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        var payload = {
+          name: form.name.value.trim(),
+          email: form.email.value.trim(),
+          company: form.company.value.trim(),
+          industry: form.industry.value.trim(),
+          website: noSite && noSite.checked ? "No website yet" : form.website.value.trim(),
+          lookingFor: withOther(getSelect("lookingFor"), "otherLooking"),
+          goal: withOther(getSelect("goal"), "otherGoal"),
+          budget: getSelect("budget"),
+          timeline: getSelect("timeline"),
+          details: form.details.value.trim(),
+          submittedAt: new Date().toISOString()
+        };
+
+        btn.disabled = true;
+        btn.textContent = "Sending…";
+        note.textContent = "Sending your inquiry…";
+
+        try {
+          await fetch(WEBHOOK, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+            mode: "no-cors"
+          });
+          form.hidden = true;
+          var conf = document.getElementById("confirmation");
+          conf.hidden = false;
+          conf.scrollIntoView({ behavior: "smooth", block: "center" });
+        } catch (err) {
+          note.className = "form__note is-error";
+          note.textContent = "Something went wrong sending your inquiry. Please try again or email us directly.";
+          btn.disabled = false;
+          btn.textContent = "Send inquiry";
+        }
+      });
+
+      var resetBtn = document.getElementById("resetForm");
+      if (resetBtn) {
+        resetBtn.addEventListener("click", function () {
+          form.reset();
+          form.hidden = false;
+          document.getElementById("confirmation").hidden = true;
+          document.getElementById("formNote").textContent = "";
+          form.querySelectorAll("select[data-reveal-other]").forEach(function (sel) {
+            sel.dispatchEvent(new Event("change"));
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

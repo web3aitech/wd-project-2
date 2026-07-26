@@ -6,12 +6,10 @@
   <meta name="description" content="Kelvo designs and builds the digital front doors of the world's best B2B businesses. Quality and attention to detail, delivered in 14 days." />
   <title>Kelvo - Building the storefront of the world's best businesses</title>
 
-  <!-- Fonts: Satoshi (body) via Fontshare, Racing Sans One (logo) via Google Fonts -->
+  <!-- Fonts: Satoshi (body) via Fontshare; Racing Sans One (logo) self-hosted & preloaded -->
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet" />
+  <link rel="preload" href="/assets/fonts/RacingSansOne.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/css/styles.css" />
   <link rel="icon" type="image/png" href="/assets/brand/favicon.png" />
@@ -43,6 +41,7 @@
       <nav class="nav__links" aria-label="Primary">
         <a href="#manifesto" class="nav__link">Our Manifesto</a>
         <a href="#work" class="nav__link">Our Work</a>
+        <a href="/contact" class="nav__link">Contact</a>
         <a href="#inquire" class="nav__cta">Inquire</a>
       </nav>
 
@@ -343,6 +342,19 @@
   <footer class="footer">
     <div class="footer__logo">kelvo</div>
     <p class="footer__note">Building the storefront of the world's best businesses.</p>
+
+    <div class="footer__bar">
+      <div class="footer__contact" aria-label="Contact details">
+        <p class="footer__contact-line">[address]</p>
+        <p class="footer__contact-line"><a href="mailto:">[business email]</a></p>
+        <p class="footer__contact-line"><a href="tel:">[phone number]</a></p>
+      </div>
+      <nav class="footer__legal" aria-label="Legal">
+        <a href="/contact">Contact</a>
+        <a href="/terms">Terms</a>
+        <a href="/privacy">Privacy</a>
+      </nav>
+    </div>
   </footer>
 
   <script src="/js/main.js"></script>

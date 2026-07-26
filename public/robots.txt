@@ -1,0 +1,6 @@
+# robots.txt — kelvodesign.com
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+Sitemap: https://kelvodesign.com/sitemap.xml

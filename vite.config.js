@@ -32,6 +32,12 @@ function kelvoRoutes() {
           return next();
         }
 
+        // Clean URLs for legal + contact pages → /terms, /privacy, /contact
+        if (pathname === "/terms" || pathname === "/privacy" || pathname === "/contact") {
+          req.url = pathname + ".html";
+          return next();
+        }
+
         // Known routes + assets → let Vite handle them
         if (
           pathname === "/" ||
