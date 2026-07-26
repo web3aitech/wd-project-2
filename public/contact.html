@@ -18,18 +18,24 @@
   <style>
     .contact-hero {
       background: var(--accent);
-      padding: 132px var(--gutter) 24px;
+      padding: 132px var(--gutter) 56px;
       text-align: left;
     }
-    .contact-hero__inner { max-width: var(--maxw); margin: 0 auto; }
+    .contact-hero__inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: 64px;
+    }
     .contact-hero .eyebrow { color: rgba(255,255,255,0.6); margin-bottom: 16px; }
     .contact-hero .section-title { color: #ffffff; }
-    .contact-hero .section-lede { color: rgba(255,255,255,0.75); max-width: 560px; }
-    .contact-hero .section-head { text-align: left; padding: 0; }
+    .contact-hero .section-lede { color: rgba(255,255,255,0.75); }
+    .contact-hero .section-head { grid-column: 1 / 2; text-align: left; padding: 0; }
 
     .contact-form {
-      background: var(--accent);
-      padding: 32px var(--gutter) 120px;
+      background: #ffffff;
+      padding: 56px var(--gutter) 120px;
     }
     .contact-form__inner {
       max-width: var(--maxw);
@@ -43,13 +49,13 @@
       font-size: clamp(20px, 2.2vw, 24px);
       font-weight: 700;
       letter-spacing: -0.01em;
-      color: #ffffff;
+      color: var(--ink);
       margin-bottom: 16px;
     }
     .contact-form__intro p {
       font-size: 16px;
       line-height: 1.6;
-      color: rgba(255,255,255,0.72);
+      color: var(--muted);
       margin-bottom: 18px;
     }
     .contact-form__intro ul {
@@ -62,7 +68,7 @@
     .contact-form__intro li {
       font-size: 15px;
       line-height: 1.5;
-      color: rgba(255,255,255,0.82);
+      color: var(--ink-2);
       padding-left: 26px;
       position: relative;
     }
@@ -70,11 +76,11 @@
       content: "✓";
       position: absolute;
       left: 0; top: 0;
-      color: #ffffff;
+      color: var(--accent);
       font-weight: 700;
     }
     .contact-form__formwrap {
-      background: #ffffff;
+      background: var(--bg-soft);
       border-radius: var(--radius);
       padding: 36px;
       box-shadow: 0 1px 2px rgba(0,0,0,0.04);
@@ -264,9 +270,9 @@
 
     <div class="footer__bar">
       <div class="footer__contact" aria-label="Contact details">
-        <p class="footer__contact-line">[address]</p>
-        <p class="footer__contact-line"><a href="mailto:">[business email]</a></p>
-        <p class="footer__contact-line"><a href="tel:">[phone number]</a></p>
+        <p class="footer__contact-line">Piazza Puccini 26, Firenze, Italia</p>
+        <p class="footer__contact-line"><a href="mailto:lukpg.adv.tech@gmail.com">lukpg.adv.tech@gmail.com</a></p>
+        <p class="footer__contact-line"><a href="tel:+393385296983">+39 3385296983</a></p>
       </div>
       <nav class="footer__legal" aria-label="Legal">
         <a href="/contact">Contact</a>
